@@ -1,64 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,600;1,100&display=swap');
-h1, h2, h3, p, a
-{
+
+* {
     font-family: 'Raleway', sans-serif;
 }
-h1
-{
+
+h1 {
     font-size: 22px;
 }
-body
-{
+
+body {
     display: flex;
     justify-content: center;
 }
-.wrapper
-{
+
+.wrapper {
     width: 1400px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+
 }
-header 
-{
+
+header {
     display: flex;
     flex-direction: column;
     height: 200px;
     justify-content: flex-end;
-    width: 1400px; /*à retirer lors de la mise en place des metaquery ? */
+
 
 }
-.top
-{
+
+.recherche {
+    display: flex;
+    flex-direction: column;
+}
+.bar {
+    display: flex;
+    border-radius: 15px;
+    height: 49px;
+    width: 332px;
+
+}
+
+.bar label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border: 1px grey solid;
+    border-right: 0px;
+    background: #F2F2F2;
+    border-radius: 15px 0 0 15px;
+    
+}
+
+.bar [type="submit"] {
+    border: 1px grey solid;
+    border-radius: 0 15px 15px 0;
+    color: White;
+    background-color: #0065FC;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    border: 1px grey solid;
+    border-left: 0px;
+}
+
+.bar [type="text"] {
+    border: 1px grey solid;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: left;
+    padding: 17px;
+    color: black;
+}
+
+.filtres {
+    display: flex;
+}
+
+.top {
     display: flex;
     justify-content: space-between;
-   
+
 }
-.logo
-{
+
+.logo {
     width: auto;
     height: 19px;
 }
-.main-nav ul
-{
+
+.main-nav ul {
     display: flex;
-    
+
 }
-.main-nav li
-{
+
+.main-nav li {
     margin-left: 67px;
 }
-nav ul
-{
+
+nav ul {
     list-style-type: none;
 }
-nav a
-{
+
+nav a {
     text-decoration: none;
 }
-nav a:hover
-{
-    text-decoration: underline; /*à définir en dessous pour la version mobile */
+
+nav a:hover {
+    text-decoration: underline;
+    /*à définir en dessous pour la version mobile */
     text-underline-offset: -48px;
     color: #0065FC;
 }

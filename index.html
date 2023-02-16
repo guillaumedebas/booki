@@ -33,12 +33,12 @@
         </header>
         <main>
             <section class="recherche">
-
-                <form class="bar">
-                    <i class="fa-solid fa-user"></i>
-                    <input:text>Marseille, France</input:text>
-                    <button type="submit">Rechercher</button>
+                <form method="get" action="" class="bar">
+                    <label for="rechercher"><i class="fa-solid fa-location-dot"></i> </label><input type="text" name="rechercher" placeholder="Destination"
+                        id="rechercher">
+                    <input type="submit" value="Rechercher">
                 </form>
+           
                 <div class="filtres">
                     <p>Filtres</p>
                     <div>
@@ -130,7 +130,7 @@
                     </div>
                 </aside>
             </section>
-            <section id="activites"  class="activites">
+            <section id="activites" class="activites">
                 <h2>Activités à Marseille</h2>
                 <div class="liste-activites">
                     <div class="activite">
