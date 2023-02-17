@@ -52,8 +52,9 @@ nav ul {
     list-style-type: none;
 }
 
-nav a {
+a {
     text-decoration: none;
+    color: black;
 }
 
 nav a:hover {
@@ -171,3 +172,75 @@ nav a:hover {
     font-size: 16px;
     margin-left: 11px;
 }
+.hebergements {
+    display: flex;
+}
+article.hebergements, aside.hebergements {
+    flex-direction: column;
+    background: #F2F2F2;
+    border-radius: 20px;
+    margin: 40px;
+    margin-left: 0px;
+    padding: 40px ;
+
+    
+}
+
+.hotels-liste {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+}
+.hotel {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background: #FFFFFF;
+    transition: 0.3s;
+    border-radius: 20px ;
+    height: 200px;
+    width: 200px;
+    margin: 31px;
+    margin-left: 0px;
+    
+}
+.hotel:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.info-hotel {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+h3 {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0px;
+    margin-left: 10px;
+}
+.info-hotel p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px;
+    margin-left: 10px;
+}
+.hotel img {
+    height: 124px;
+        border: 5px solid #FFFFFF;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: civer;
+}
+.notation {
+    margin:20px
+    margin-top: 5px;
+    margin-left: 10px;
+
+}
+.fa-star {
+    color: #0065FC;
+    font-size: 12px;
+}
+.fa-star.grey {
+    color: #F2F2F2;
+}
+
