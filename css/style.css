@@ -174,12 +174,12 @@ nav a:hover {
 }
 .hebergements {
     display: flex;
+    
 }
 article.hebergements, aside.hebergements {
     flex-direction: column;
     background: #F2F2F2;
     border-radius: 20px;
-    
     margin-left: 0px;
     padding: 40px ;
 
@@ -271,4 +271,33 @@ h3 {
 .info-hotel{
     justify-content: space-between;
     margin: 10px;
+}
+.liste-activites {
+    display: flex;
+    justify-content: space-between;
+}
+.activite {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background: #FFFFFF;
+    transition: 0.3s;
+    border-radius: 20px ;
+    height: 445px;
+    width: 302px;
+    margin-left: 0px;
+}
+.activite:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.activite img {
+    height: 389px;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+}
+.info-activite {
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+   justify-content: center;
 }
