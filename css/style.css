@@ -179,17 +179,22 @@ article.hebergements, aside.hebergements {
     flex-direction: column;
     background: #F2F2F2;
     border-radius: 20px;
-    margin: 40px;
+    
     margin-left: 0px;
     padding: 40px ;
 
     
 }
 
+
+article.hebergements {
+    margin-right: 30px;
+}
+
 .hotels-liste {
     display: flex;
     flex-wrap: wrap;
-    width: 800px;
+    
 }
 .hotel {
     display: flex;
@@ -198,8 +203,8 @@ article.hebergements, aside.hebergements {
     background: #FFFFFF;
     transition: 0.3s;
     border-radius: 20px ;
-    height: 200px;
-    width: 200px;
+    height: 209px;
+    width: 246px;
     margin: 31px;
     margin-left: 0px;
     
@@ -221,26 +226,49 @@ h3 {
 .info-hotel p {
     font-size: 14px;
     font-weight: 400;
-    margin: 5px;
+    margin: 0px;
     margin-left: 10px;
 }
 .hotel img {
     height: 124px;
-        border: 5px solid #FFFFFF;
+    border: 5px solid #FFFFFF;
     border-radius: 20px 20px 0px 0px;
-    object-fit: civer;
+    object-fit: cover;
+}
+.titre-stylise {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .notation {
-    margin:20px
-    margin-top: 5px;
+    margin: 0px;
     margin-left: 10px;
 
 }
 .fa-star {
+    margin: 0px;
     color: #0065FC;
     font-size: 12px;
 }
 .fa-star.grey {
     color: #F2F2F2;
 }
-
+.fa-chart-line {
+    color:#0065FC;
+}
+.hotels-populaires .hotel {
+    flex-direction: row;
+    width: 343px;
+    height: 144px;
+    height: auto;
+}
+.hotels-populaires .hotel img {
+    width : 137px;
+    border: 5px solid #FFFFFF;
+    border-radius: 20px 0px 0px 20px;
+    object-fit: cover;
+}
+.info-hotel{
+    justify-content: space-between;
+    margin: 10px;
+}
