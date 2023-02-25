@@ -35,7 +35,7 @@ header {
 
 nav ul {
     display: flex;
-    gap: clamp(48px, 4.79vw, 67px);
+    gap: 67px;
     list-style-type: none;
     padding: 0px;
 }
@@ -125,7 +125,7 @@ header nav a:hover {
     align-items: baseline;
     text-align: center;
     flex-wrap: wrap;
-    gap: clamp(29px, 2.86vw, 40px);
+    gap: clamp(10px, 2.86vw, 40px);
 
 }
 
@@ -190,7 +190,7 @@ header nav a:hover {
 
 
 
-.hebergements {
+section.hebergements {
     display: flex;
     gap: clamp(22px, 2.13vw, 30px);
 
@@ -205,8 +205,7 @@ aside.hebergements {
 }
 
 
-article.hebergements,
-aside.hebergements {
+article.hebergements, aside.hebergements {
     flex-direction: column;
     background: #F2F2F2;
     border-radius: 20px;
@@ -369,7 +368,7 @@ article.hebergements a {
     width: 100%;
     border-radius: 20px 0px 0px 20px;
     overflow: hidden;
-    border: clamp(4px, 0.36vw, 5px) solid #FFFFFF;
+    border: 5px solid #FFFFFF;
     box-sizing: border-box;
 }
 
@@ -481,4 +480,59 @@ footer ul {
     padding: 0px;
     gap: clamp(14px, 1.43vw, 20px);
 
+}
+@media screen and (max-width: 992px) {
+    p {
+        font-size: clamp(0.8rem, 1.613vw ,1rem);
+    }
+   
+    .filtre {
+       gap: clamp(6px, 1.008vw ,10px);
+    }
+    .filtres-liste {
+       gap: clamp(0px, 2.86vw, 40px);
+       font-size: clamp(1rem, 1.815vw ,1.125rem);
+       margin-right: clamp(7px, 1.008vw ,20px);
+    }
+    .filtres-liste i {
+       margin-left:  clamp(7px, 1.008vw ,20px);
+    }
+    section.hebergements  {
+       flex-direction: column;
+    }
+    .hotels-populaires {
+        flex-direction: row;
+    }
+    .hebergements {
+        display: flex;
+        gap: 30px; 
+    }
+    article.hebergements {
+        padding: 20px;
+    }
+    .hotels-liste {
+       gap: 30px;
+    }
+    .info-hotel p {
+        font-size: 0.875rem;
+        margin-left: 10px;
+    }
+    .info-hotel h3 {
+        font-size:1rem;
+        margin-left: 10px;
+    }
+    .notation {
+        margin-left: 10px;
+    }
+    .fa-star {
+    font-size: 12px;
+    
+    }
+    .hotels-populaires {
+      gap: 23px;
+    }
+    .info-hotel-populaire p {
+        font-size: clamp(0.8rem, 1.411vw, 0.875rem);
+        margin-left: clamp(7px, 1.008vw, 10px);
+    }
 }
