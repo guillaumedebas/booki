@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;600;700&display=swap');
 
-
 * {
     font-family: 'Raleway', sans-serif;
 }
@@ -17,6 +16,8 @@ p {
 body {
     display: flex;
     justify-content: center;
+    margin: 0px;
+    overflow: visible;
 }
 
 .wrapper {
@@ -56,9 +57,9 @@ a {
     font-size: 1rem;
 }
 
+
 header nav a:hover {
     text-decoration: underline;
-    /*à définir en dessous pour la version mobile */
     text-underline-offset: clamp(-48px, -3.43vw, -34px);
     color: #0065FC;
 }
@@ -66,15 +67,14 @@ header nav a:hover {
 .recherche {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px
 }
 
 .bar {
     display: flex;
     border-radius: 15px;
-    height: 49px;
-    width: 332px;
-
-
 }
 
 .bar label {
@@ -100,6 +100,11 @@ header nav a:hover {
     text-align: center;
     border-left: 0px;
     padding: 14px 16px 14px 16px;
+
+}
+
+.fa-magnifying-glass {
+    display: none;
 }
 
 .bar [type="text"] {
@@ -114,19 +119,26 @@ header nav a:hover {
     text-align: left;
     padding: 17px;
     color: black;
-    /* Penser à ajouter la loupe et le texte pour la partie mobile */
 }
 
 .filtres-liste {
     display: flex;
     font-weight: 700;
     font-size: 1.125rem;
-    height: 100%;
-    align-items: baseline;
+    width: 100%;
+
+
     text-align: center;
     flex-wrap: wrap;
     gap: clamp(10px, 2.86vw, 40px);
 
+
+}
+
+.filtres-boutons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
 }
 
 .filtre p {
@@ -141,7 +153,7 @@ header nav a:hover {
     border: 2px #D9D9D9 solid;
     border-radius: 25px;
     height: 50px;
-    margin-top: 20px;
+    margin-top: 0px;
     gap: 10px;
 
 }
@@ -188,8 +200,6 @@ header nav a:hover {
 
 }
 
-
-
 section.hebergements {
     display: flex;
     gap: clamp(22px, 2.13vw, 30px);
@@ -198,19 +208,23 @@ section.hebergements {
 
 article.hebergements {
     flex: 2;
+
+    justify-content: space-between;
 }
 
 aside.hebergements {
     flex: 1;
 }
 
-
-article.hebergements, aside.hebergements {
+article.hebergements,
+aside.hebergements {
     flex-direction: column;
     background: #F2F2F2;
     border-radius: 20px;
     padding: clamp(15px, 1.43vw, 20px);
-    justify-content: flex-start;
+    height: auto;
+
+
 }
 
 h2 {
@@ -320,8 +334,13 @@ h3 {
 
 .afficher-plus {
     display: flex;
-    height: 100%;
-    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 25%;
+    justify-content: center;
+
+
+
 }
 
 article.hebergements a {
@@ -356,7 +375,6 @@ article.hebergements a {
     overflow: hidden;
 }
 
-
 .hotel-populaire:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -371,7 +389,6 @@ article.hebergements a {
     border: 5px solid #FFFFFF;
     box-sizing: border-box;
 }
-
 
 .hotel-populaire img {
     aspect-ratio: 100/42;
@@ -388,7 +405,6 @@ article.hebergements a {
 
 }
 
-
 .info-hotel-populaire {
     display: flex;
     flex-direction: column;
@@ -398,8 +414,6 @@ article.hebergements a {
     flex: 2;
 
 }
-
-
 
 .liste-activites {
     display: flex;
@@ -481,58 +495,269 @@ footer ul {
     gap: clamp(14px, 1.43vw, 20px);
 
 }
+
 @media screen and (max-width: 992px) {
     p {
-        font-size: clamp(0.8rem, 1.613vw ,1rem);
+        font-size: clamp(0.8rem, 1.613vw, 1rem);
     }
-   
+
     .filtre {
-       gap: clamp(6px, 1.008vw ,10px);
+        gap: clamp(6px, 1.008vw, 10px);
     }
+
     .filtres-liste {
-       gap: clamp(0px, 2.86vw, 40px);
-       font-size: clamp(1rem, 1.815vw ,1.125rem);
-       margin-right: clamp(7px, 1.008vw ,20px);
+        gap: clamp(0px, 2.86vw, 40px);
+        font-size: clamp(1rem, 1.815vw, 1.125rem);
+        margin-right: clamp(7px, 1.008vw, 10px);
     }
+
     .filtres-liste i {
-       margin-left:  clamp(7px, 1.008vw ,20px);
+        margin-left: clamp(7px, 1.008vw, 10px);
     }
-    section.hebergements  {
-       flex-direction: column;
+
+    section.hebergements {
+        flex-direction: column;
     }
+
     .hotels-populaires {
         flex-direction: row;
     }
+
     .hebergements {
         display: flex;
-        gap: 30px; 
+        gap: 30px;
     }
+
     article.hebergements {
         padding: 20px;
     }
+
     .hotels-liste {
-       gap: 30px;
+        gap: 30px;
     }
+
     .info-hotel p {
         font-size: 0.875rem;
         margin-left: 10px;
     }
+
     .info-hotel h3 {
-        font-size:1rem;
+        font-size: 1rem;
         margin-left: 10px;
     }
+
     .notation {
         margin-left: 10px;
     }
+
     .fa-star {
-    font-size: 12px;
-    
+        font-size: 0.75rem;
+
     }
+
     .hotels-populaires {
-      gap: 23px;
+        gap: 23px;
     }
+
     .info-hotel-populaire p {
         font-size: clamp(0.8rem, 1.411vw, 0.875rem);
         margin-left: clamp(7px, 1.008vw, 10px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        margin: 0px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    li.logo {
+        margin-right: auto;
+
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    li.logo {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        flex-basis: 100%;
+    }
+
+    header li {
+        flex-basis: 50%;
+        text-align: center;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    main {
+        padding: 0px;
+
+
+    }
+
+    .outils {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    section.recherche {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+
+
+
+    }
+
+    header nav a:hover {
+        text-decoration: underline;
+        text-underline-offset: 1px;
+    }
+
+    .texte-rechercher {
+        display: none;
+
+    }
+
+    .fa-magnifying-glass {
+        display: inline;
+
+    }
+
+    .filtres-liste {
+        flex-direction: column;
+        width: 100%;
+        gap: 14px;
+        font-size: 1.125rem;
+        justify-content: center;
+        align-content: center;
+
+
+
+
+    }
+
+    .filtres-liste p {
+        font-size: 1.125rem;
+    }
+
+    .filtres-boutons {
+        width: 100%;
+        justify-content: space-between;
+
+    }
+
+    .filtres-titre {
+        flex-basis: 100%;
+        margin: 0px;
+
+    }
+
+    .filtre {
+        flex-basis: 45%;
+
+    }
+
+    aside.hebergements,
+    article.hebergements {
+        border-radius: 0;
+    }
+
+    article.hebergements {
+        background: none;
+    }
+
+    section.hebergements {
+        flex-direction: column-reverse;
+    }
+
+    .hotels-populaires {
+        flex-direction: column;
+    }
+
+    .info-hotel-populaire p {
+        font-size: 0.875rem;
+        margin-left: 10px;
+    }
+
+    .hotels-liste {
+        flex-direction: column;
+    }
+
+    .hotel {
+        flex: 1;
+        width: 100%;
+        aspect-ratio: 10/6;
+    }
+
+    .hotel img {
+        aspect-ratio: 100/37;
+    }
+
+    .afficher-plus {
+        display: none;
+
+    }
+
+    .activites {
+        padding: 20px;
+    }
+
+    .liste-activites {
+        flex-direction: column;
+
+
+
+    }
+
+    .activite {
+
+        width: 100%;
+        aspect-ratio: 100/57;
+
+
+
+    }
+
+    .illustration-activite img {
+
+        aspect-ratio: 100/57;
+
+    }
+
+    .info-activite {
+
+        aspect-ratio: 100/16;
+
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    h3 {
+
+        font-size: 1rem;
+        margin-left: 10px;
     }
 }
