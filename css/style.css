@@ -15,7 +15,6 @@
 
 .box--space {
     border-radius: 0px;
-    margin: clamp(18px, 1.78vw, 25px);
     margin-bottom: 0px;
     overflow: visible;
     background: none;
@@ -28,6 +27,7 @@
 }
 
 .box--space--body {
+    margin: 0px;
     justify-content: center;
     flex-direction: row;
 }
@@ -59,7 +59,43 @@
     display: flex;
     gap: 67px;
     list-style-type: none;
-    padding: 0px;
+    box-sizing: border-box;
+}
+
+.box--part--header nav ul {
+    display: flex;
+    gap: 67px;
+    list-style-type: none;
+    padding: 0 15px 0 15px;
+    margin: 0px;
+    margin-bottom: 67px;
+    box-sizing: border-box;
+}
+
+.box--part nav li {
+    box-sizing: border-box;
+    
+}
+
+
+.box--part--header nav li {
+    padding-top: 46px;
+    box-sizing: border-box;
+    
+}
+
+.box--part--header nav li:not(.logo) {
+    padding-top: 46px;
+    box-sizing: border-box;
+}
+
+.box--part--header nav li:not(.logo):hover {
+    border-top: 2px solid #0065FC;
+    padding-top: 44px;
+}
+
+.box--part--header a:hover {
+  color:#0065FC;
 }
 
 .box--part--header {
@@ -72,15 +108,11 @@
     height: auto;
 }
 
-.box--part--header a:hover {
-    text-decoration: underline;
-    text-underline-offset: -46px;
-    color: #0065FC;
-}
-
 .box--part--slogan {
     flex-direction: column;
+    padding: 0 15px 0 15px;
     aspect-ratio: 100/1;
+    margin-top: 0px;
 }
 
 .box--part--slogan h1 {
@@ -99,16 +131,20 @@
 
 .box--part--search {
     flex-direction: column;
-    gap: 10px
+    gap: 10px;
+    
+    
 }
 
 .box--part--hosting {
     gap: clamp(22px, 2.13vw, 30px);
     margin-bottom: 60px;
+    padding: 0 15px 0 15px;
 }
 
 .box--part--activity {
     flex-direction: column;
+    padding: 0 15px 0 15px;
 }
 
 .box--part--footer {
@@ -117,6 +153,7 @@
     margin-top: clamp(43px, 4.3vw, 60px);
     align-items: flex-start;
     padding: clamp(32px, 3.2vw, 45px);
+    margin: 60px 15px 0 15px;
 }
 
 .box--part--footer h2 {
@@ -186,6 +223,7 @@
     font-weight: 400;
     margin: 0px;
     margin-left: clamp(7px, 0.71vw, 10px);
+    padding-top: 10px;
 }
 
 .box--tool {
@@ -198,7 +236,8 @@
 .box--tool--bar {
     border-radius: 15px;
     margin-bottom: 32px;
-   }
+    padding: 0 15px 0 15px;
+}
 
 .box--tool--bar label {
     display: flex;
@@ -242,6 +281,11 @@
     color: black;
 }
 
+.box--tool--bar [type="text"]::placeholder {
+    color: black;
+    opacity: 1;
+   
+}
 
 
 .box--tool--filter-list {
@@ -251,12 +295,13 @@
     flex-wrap: wrap;
     gap: clamp(10px, 2.86vw, 40px);
     margin-bottom: 20px;
+    padding: 0 15px 0 15px;
 }
 
 .box--tool--filter-list .filter-boutons {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: 13px;
 }
 
 .box--tool--filter-list .filter p {
@@ -293,6 +338,7 @@
     gap: 11px;
     margin-top: 0px;
     margin-bottom: 20px;
+    padding: 0 15px 0 15px;
 }
 
 .box--tool--indication .circle {
@@ -319,8 +365,6 @@
 
 .illustration-hosting {
     display: flex;
-    height: 100%;
-    width: 100%;
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -340,7 +384,7 @@
 .fa-star {
     margin: 0px;
     color: #0065FC;
-    font-size: clamp(10px, 0.86vw, 12px);
+    font-size: 0.813rem;
 }
 
 .fa-star.grey {
@@ -349,6 +393,7 @@
 
 .fa-chart-line {
     color: #0065FC;
+    font-size: 1.375rem;
 }
 
 .box--card:hover {
@@ -356,7 +401,7 @@
 }
 
 .box--card--hosting-main {
-    aspect-ratio: 10/8;
+    
     padding: 3px;
 }
 
@@ -364,6 +409,7 @@
     flex: 2;
     border-radius: 20px 20px 0px 0px;
     border: 2px solid #FFFFFF;
+    max-height : 124px;
 }
 
 .box--card--hosting-main img {
@@ -393,6 +439,7 @@
     font-weight: 400;
     margin: 0px;
     margin-left: clamp(7px, 0.71vw, 10px);
+    padding-top: 10px;
 }
 
 .more {
@@ -406,7 +453,9 @@
 .box--card--hosting-pop {
     flex-direction: row;
     flex: 1;
-    aspect-ratio: 100/42;
+    height: 100%;
+    
+
 }
 
 .illustration-hosting--pop {
@@ -415,6 +464,10 @@
     overflow: hidden;
     border: 5px solid #FFFFFF;
     box-sizing: border-box;
+    aspect-ratio: 100/105;
+    max-height : 137px;
+    max-width: 144px;
+   
 }
 
 .box--card--hosting-pop img {
@@ -423,9 +476,6 @@
     object-fit: cover;
 }
 
-.box--card--activity {
-    aspect-ratio: 2/3;
-}
 
 .hosting-information--pop {
     display: flex;
@@ -447,12 +497,14 @@
 
 .illustration--activity {
     border-radius: 20px 20px 0px 0px;
+    aspect-ratio: 100/115;
     overflow: hidden;
+    
 }
 
 .illustration--activity img {
     width: 100%;
-    aspect-ratio: 2/3;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -465,8 +517,8 @@
 }
 
 @media screen and (max-width: 992px) {
-    
-    
+
+
     .box--part--hosting {
         flex-direction: column;
         gap: 30px;
@@ -477,7 +529,30 @@
         font-size: clamp(0.8rem, 1.613vw, 1rem);
     }
 
-   
+    .box--part h3 {
+        font-size: 1rem;
+        margin: 0px;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-size: clamp(0.875rem, 1.143vw, 1rem);
+        margin-left: clamp(7px, 0.71vw, 10px);
+    }
+
+    .box--card--hosting h3 {
+        font-size: 1rem;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .illustration-hosting--pop {
+        aspect-ratio: 100/135;
+        max-height : 137px;
+        max-width: 144px;
+       
+    }
+    
+
+
     .box--area--hosting-main {
         padding: 20px;
     }
@@ -487,8 +562,9 @@
     }
 
     .box--area--hosting-pop .hosting-list--pop {
-
         flex-direction: row;
+        
+
     }
 
     .box--area--hosting-main .hosting-list--main {
@@ -511,25 +587,23 @@
 
     .hosting-information--main p {
         font-size: 0.875rem;
-        margin-left: 10px;
     }
 
-    .notation {
-        margin-left: 10px;
-    }
-
+  
     .fa-star {
-        font-size: 0.75rem;
+        font-size: 0.813rem;
     }
 
     .more {
         height: 100px;
     }
-
+    
+  
     .hosting-information--pop p {
         font-size: clamp(0.8rem, 1.411vw, 0.875rem);
         margin-left: clamp(7px, 1.008vw, 10px);
     }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -540,13 +614,35 @@
     .box--part--header li.logo {
         margin-right: auto;
     }
+
+    .box--part--header nav ul {
+        padding: 0;
     
+    }
+    .box--part--header nav li:not(.logo) {
+        padding-bottom: 26px;
+        box-sizing: border-box;
+    }
+    
+    .box--part--header nav li:not(.logo) {
+        border-bottom: 2px solid #F2F2F2;
+         padding-bottom: 24px;
+     }
+
+    .box--part--header nav li:not(.logo):hover {
+       border-top: none;
+        border-bottom: 2px solid #0065FC;
+        padding-bottom: 26px;
+    }
+
+
     .box--part--header nav ul {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 0px;
-     
+        margin-bottom: 31px;
+
     }
 
     .box--part--header .logo {
@@ -563,6 +659,7 @@
 
     .box--part--slogan {
         margin: 20px;
+        margin-top: 0px;
     }
 
     .box--part--search {
@@ -570,15 +667,17 @@
         flex-direction: column;
         justify-content: space-between;
         margin: 20px;
+        margin-top: 0px;
+        gap: 0px;
+    }
+    .box--tool--filter-list .filter-boutons {
+        gap: 20px;
     }
 
-    .box--part--header a:hover {
-        text-decoration: underline;
-        text-underline-offset: 1px;
-    }
 
-    .box--part--hosting {
+      .box--part--hosting {
         flex-direction: column-reverse;
+        padding: 0;
     }
 
     .box--part--activity {
@@ -592,8 +691,8 @@
 
     .box--part h3 {
         font-size: 1rem;
-        margin-left: 10px;
     }
+
 
     .box--area {
         border-radius: 0;
@@ -612,14 +711,14 @@
     }
 
     .box--tool--bar [type="text"] {
-        flex : 1 1 auto; 
+        flex: 1 1 auto;
     }
 
     .search-text {
         display: none;
     }
 
-    .box--tool--bar  .fa-magnifying-glass {
+    .box--tool--bar .fa-magnifying-glass {
         display: inline;
     }
 
@@ -632,6 +731,7 @@
 
     .box--tool--filter-list p {
         font-size: 1.125rem;
+        margin: 0px;
     }
 
     .box--tool--filter-list .filter-boutons {
@@ -654,7 +754,7 @@
 
     .hosting-information--pop p {
         font-size: 0.875rem;
-        margin-left: 10px;
+        
     }
 
     .box--area--hosting-main .hosting-list--main {
@@ -679,7 +779,7 @@
 
     .box--card--hosting-main {
         flex: 1;
-        aspect-ratio: 10/6;
+       
     }
 
     .box--card--hosting-main img {
@@ -698,12 +798,9 @@
         width: 100%;
     }
 
-    .box--card--activity {
-        aspect-ratio: 100/57;
-    }
-
-    .illustration--activity img {
-        aspect-ratio: 100/57;
+  
+    .illustration--activity {
+        max-height : 134px;
     }
 
     .information-activity {
