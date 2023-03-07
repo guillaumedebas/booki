@@ -305,12 +305,12 @@
 }
 
 .box--tool--filter-list .filter p {
-    margin-right: 20px;
+    margin-right: 0.8rem;
 }
 
 .box--tool--filter-list .filter {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border: 2px #D9D9D9 solid;
     border-radius: 25px;
@@ -325,7 +325,7 @@
 
 .box--tool--filter-list i {
     color: #0065FC;
-    margin-left: 20px;
+    margin-left: 0.8rem;
 }
 
 .box--tool--filter-list .filters-title {
@@ -581,9 +581,7 @@
         gap: clamp(6px, 1.008vw, 10px);
     }
 
-    .box--tool--filter-list i {
-        margin-left: clamp(7px, 1.008vw, 10px);
-    }
+    
 
     .hosting-information--main p {
         font-size: 0.875rem;
@@ -625,14 +623,15 @@
     }
     
     .box--part--header nav li:not(.logo) {
+        border-top: none;
         border-bottom: 2px solid #F2F2F2;
          padding-bottom: 24px;
      }
 
     .box--part--header nav li:not(.logo):hover {
-       border-top: none;
+        border-top: 2px solid white;
         border-bottom: 2px solid #0065FC;
-        padding-bottom: 26px;
+        padding-bottom: 24px;
     }
 
 
@@ -671,7 +670,7 @@
         gap: 0px;
     }
     .box--tool--filter-list .filter-boutons {
-        gap: 20px;
+        gap: 15px;
     }
 
 
@@ -735,7 +734,7 @@
     }
 
     .box--tool--filter-list .filter-boutons {
-        justify-content: center;
+        justify-content: flex-start;
 
     }
 
@@ -745,7 +744,8 @@
     }
 
     .box--tool--filter-list .filter {
-        flex-basis: 45%;
+        flex-basis: 35%;
+        flex-grow: 1;
     }
 
     .box--tool--indication {
